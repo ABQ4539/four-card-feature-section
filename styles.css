@@ -31,6 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--light-gray);
 }
 main {
     min-width: 360px;
@@ -38,10 +39,11 @@ main {
     background-color: var(--light-gray);
 }
 div {
-    max-width: 360px;
+    max-width: 350px;
 }
 .text {
     text-align: center;
+    margin-inline: auto;
     margin-bottom: 50px;
     margin-top: 20px;
     padding: 0 27px;
@@ -58,11 +60,15 @@ h1 {
 #text-p {
     padding: 15px 0;
 }
+.container {
+    margin-inline: auto;
+}
 .card {
-    margin: 20px 20px 40px;
-    padding: 20px 35px;
+    margin: 20px 20px 30px;
+    padding: 20px 30px;
     border-radius: 5px;
-    background-color: var(--light-gray)
+    background-color: var(--light-gray);
+    box-shadow: 0 5px 15px var(--gray-blue);
 }
 #first-card {
     border-top: 4px solid var(--cyan);
@@ -90,7 +96,47 @@ h1, .card-title {
     padding-bottom: 35px;
 }
 
-
+@media (min-width: 850px) {
+    main {
+        min-width: 100%;
+        margin-top: 40px;
+        margin-inline: auto;
+    }
+    .container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    div {
+        max-width: 100%;
+    }
+    .text {
+        text-align: center;
+        margin-inline: auto;
+        margin-bottom: 50px;
+        max-width: 570px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .middle {
+        display: flex;
+        flex-direction: column;
+        margin-inline: 15px;
+    }
+    .card {
+        height: auto;
+        max-width: 370px;
+    }
+    #first-card, #fourth-card {
+        margin: auto 0;
+    }
+    #second-card, #third-card {
+        margin: 10px;
+    }
+}
 
 .attribution { 
     font-size: 11px; 
